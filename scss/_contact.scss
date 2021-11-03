@@ -26,6 +26,12 @@
         font-size: 1.5rem;
     }
 
+    &__phone, &__email, &__address {
+        text-align: center;
+    }
+
+    
+
     .social-icons {
         position: initial;
         margin-top: 2rem;

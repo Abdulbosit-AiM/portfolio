@@ -414,6 +414,10 @@ footer {
   font-size: 1.5rem;
 }
 
+.contact__phone, .contact__email, .contact__address {
+  text-align: center;
+}
+
 .contact .social-icons {
   position: initial;
   margin-top: 2rem;
