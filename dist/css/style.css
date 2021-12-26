@@ -486,11 +486,11 @@ footer {
 }
 
 body {
+  height: 100vh;
+  line-height: 1;
   background-color: #272727;
   color: white;
-  height: 100vh;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1;
 }
 
 h1, h2, h3 {
