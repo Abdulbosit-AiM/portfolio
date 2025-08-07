@@ -73,9 +73,16 @@
             font-size: $font-size-xl;
             font-weight: 600;
             margin-bottom: $spacing-2;
-            color: set-text-color($primary-color);
-        }
-        
+            color: $text-dark;
+            background: #fff;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            padding: $spacing-6;
+            transition: transform 0.2s ease-in-out;
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
         .contact__value {
             color: $text-muted;
             

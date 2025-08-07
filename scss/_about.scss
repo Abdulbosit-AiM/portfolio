@@ -39,7 +39,10 @@
         position: relative;
         z-index: 2;
         padding: $spacing-6;
-        @include card;
+        background: #fff;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding: $spacing-6;
         margin-bottom: $spacing-8;
 
         .text-secondary {
@@ -74,7 +77,10 @@
         grid-gap: $spacing-4;
         
         &__item {
-            @include card;
+            background: #fff;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            padding: $spacing-6;
             text-align: left;
             border-left: 4px solid $secondary-color;
             
@@ -115,7 +121,10 @@
         grid-gap: $spacing-4;
         
         &__category {
-            @include card;
+            background: #fff;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            padding: $spacing-6;
             text-align: left;
             
             h3 {
@@ -126,7 +135,7 @@
             }
             
             p {
-                color: lighten(set-text-color($primary-color), 5%);
+                color: $text-muted;
                 font-size: $font-size-sm;
                 line-height: 1.6;
                 margin-bottom: 0;
@@ -135,7 +144,10 @@
     }
 
     .aspirations {
-        @include card;
+        background: #fff;
+        border-radius: $border-radius;
+        box-shadow: $box-shadow;
+        padding: $spacing-6;
         text-align: left;
         max-width: 600px;
         margin: $spacing-8 auto;
@@ -161,8 +173,15 @@
         }
 
         &__job {
-            @include card;
-            @include hover-lift;
+            background: #fff;
+            border-radius: $border-radius;
+            box-shadow: $box-shadow;
+            padding: $spacing-6;
+            transition: transform 0.2s ease-in-out;
+            
+            &:hover {
+                transform: translateY(-2px);
+            }
             border-left: 4px solid $secondary-color;
             position: relative;
             
@@ -192,7 +211,7 @@
             }
             
             h3 {
-                color: set-text-color($primary-color);
+                color: $text-dark;
                 font-size: $font-size-xl;
                 font-weight: 600;
             }
@@ -206,7 +225,7 @@
             }
             
             p {
-                color: lighten(set-text-color($primary-color), 5%);
+                color: $text-muted;
                 line-height: 1.6;
             }
         }

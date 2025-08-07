@@ -44,7 +44,11 @@
         border-radius: $border-radius;
         overflow: hidden;
         cursor: pointer;
-        @include hover-lift;
+        transition: transform 0.2s ease-in-out;
+        
+        &:hover {
+            transform: translateY(-2px);
+        }
         background: lighten($primary-color, 5%);
         box-shadow: $box-shadow;
 
@@ -68,7 +72,7 @@
                 rgba($secondary-color, 0.7)
             );
             opacity: 0;
-            @include transition-ease;
+            transition: all 0.3s ease-in-out;
             backdrop-filter: blur(5px);
         }
 
@@ -114,7 +118,7 @@
         font-size: $font-size-sm;
         letter-spacing: 0.05em;
         transform: translateY(20px);
-        @include transition-ease;
+        transition: all 0.3s ease-in-out;
         display: flex;
         align-items: center;
         justify-content: center;
