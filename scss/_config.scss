@@ -37,34 +37,34 @@ $raw-warning: #f59e0b;
 $raw-error: #ef4444;
 
 // Transparent color variables
-$transparent-white-5: color.rgba(white, 0.05);
-$transparent-white-10: color.rgba(white, 0.1);
-$transparent-white-15: color.rgba(white, 0.15);
-$transparent-white-20: color.rgba(white, 0.2);
-$transparent-white-30: color.rgba(white, 0.3);
+$transparent-white-5: rgba(white, 0.05);
+$transparent-white-10: rgba(white, 0.1);
+$transparent-white-15: rgba(white, 0.15);
+$transparent-white-20: rgba(white, 0.2);
+$transparent-white-30: rgba(white, 0.3);
 
-$transparent-primary-950-95: color.rgba($raw-primary-950, 0.95);
-$transparent-primary-950-90: color.rgba($raw-primary-950, 0.9);
-$transparent-primary-950-40: color.rgba($raw-primary-950, 0.4);
-$transparent-primary-950-30: color.rgba($raw-primary-950, 0.3);
+$transparent-primary-950-95: rgba($raw-primary-950, 0.95);
+$transparent-primary-950-90: rgba($raw-primary-950, 0.9);
+$transparent-primary-950-40: rgba($raw-primary-950, 0.4);
+$transparent-primary-950-30: rgba($raw-primary-950, 0.3);
 
-$transparent-primary-900-90: color.rgba($raw-primary-900, 0.9);
-$transparent-primary-900-98: color.rgba($raw-primary-900, 0.98);
+$transparent-primary-900-90: rgba($raw-primary-900, 0.9);
+$transparent-primary-900-98: rgba($raw-primary-900, 0.98);
 
-$transparent-accent-orange-20: color.rgba($raw-accent-orange, 0.2);
-$transparent-accent-orange-30: color.rgba($raw-accent-orange, 0.3);
-$transparent-accent-orange-80: color.rgba($raw-accent-orange, 0.8);
+$transparent-accent-orange-20: rgba($raw-accent-orange, 0.2);
+$transparent-accent-orange-30: rgba($raw-accent-orange, 0.3);
+$transparent-accent-orange-80: rgba($raw-accent-orange, 0.8);
 
-$transparent-accent-pink-60: color.rgba($raw-accent-pink, 0.6);
+$transparent-accent-pink-60: rgba($raw-accent-pink, 0.6);
 
-$transparent-success-20: color.rgba($raw-success, 0.2);
-$transparent-success-30: color.rgba($raw-success, 0.3);
+$transparent-success-20: rgba($raw-success, 0.2);
+$transparent-success-30: rgba($raw-success, 0.3);
 
-$transparent-warning-20: color.rgba($raw-warning, 0.2);
-$transparent-warning-30: color.rgba($raw-warning, 0.3);
+$transparent-warning-20: rgba($raw-warning, 0.2);
+$transparent-warning-30: rgba($raw-warning, 0.3);
 
-$transparent-black-90: color.rgba(black, 0.9);
-$transparent-black-10: color.rgba(black, 0.1);
+$transparent-black-90: rgba(black, 0.9);
+$transparent-black-10: rgba(black, 0.1);
 
 // Design tokens - Modern color system
 :root {
