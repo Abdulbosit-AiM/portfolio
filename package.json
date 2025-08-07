@@ -1,0 +1,16 @@
+{
+  "name": "modern-portfolio",
+  "version": "1.0.0",
+  "description": "Modern portfolio website with improved performance and accessibility",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "sass:watch": "sass --watch scss:dist/css",
+    "sass:build": "sass scss:dist/css --style=compressed"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "sass": "^1.69.0"
+  }
+}
