@@ -1,0 +1,128 @@
+// Reusable component styles
+
+.social-icons {
+    display: flex;
+    gap: $spacing-4;
+    
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 48px;
+        height: 48px;
+        background: rgba(white, 0.1);
+        border-radius: $border-radius;
+        transition: all $transition-medium;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(white, 0.1);
+        
+        &:hover {
+            background: rgba($secondary-color, 0.2);
+            border-color: rgba($secondary-color, 0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba($secondary-color, 0.2);
+        }
+        
+        i {
+            font-size: $font-size-xl;
+            color: set-text-color($primary-color);
+            transition: color $transition-fast;
+        }
+        
+        &:hover i {
+            color: $secondary-color;
+        }
+    }
+    
+    // Vertical layout for specific pages
+    &--vertical {
+        flex-direction: column;
+        position: fixed;
+        bottom: $spacing-4;
+        left: $spacing-4;
+        z-index: 10;
+        
+        @include media-md {
+            position: static;
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+}
+
+// Enhanced footer
+footer {
+    font-size: $font-size-sm;
+    position: fixed;
+    bottom: $spacing-4;
+    right: $spacing-4;
+    text-align: right;
+    padding: $spacing-3;
+    color: $text-muted;
+    background: rgba($primary-color, 0.8);
+    border-radius: $border-radius;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(white, 0.1);
+    z-index: 10;
+    
+    @include media-md {
+        transform: none;
+        position: static;
+        background: transparent;
+        border: none;
+        backdrop-filter: none;
+        text-align: center;
+        margin-top: $spacing-8;
+    }
+}
+
+// Loading spinner component
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid rgba($secondary-color, 0.3);
+    border-radius: 50%;
+    border-top-color: $secondary-color;
+    animation: spin 1s ease-in-out infinite;
+}
+
+// Card component
+.card {
+    @include card;
+    @include hover-lift;
+}
+
+// Button variants
+.btn-ghost {
+    background: transparent;
+    color: $secondary-color;
+    border: 1px solid rgba($secondary-color, 0.3);
+    
+    &:hover {
+        background: rgba($secondary-color, 0.1);
+        border-color: $secondary-color;
+    }
+}
+
+// Improved accessibility
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+// High contrast mode support
+@media (prefers-contrast: high) {
+    .social-icons a {
+        border: 2px solid currentColor;
+    }
+    
+    .projects__item {
+        border: 2px solid $secondary-color;
+    }
+}

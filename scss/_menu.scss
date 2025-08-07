@@ -6,7 +6,20 @@
     height: 20px;
     width: 28px;
     cursor: pointer;
+    background: none;
+    border: none;
+    padding: $spacing-2;
+    border-radius: $border-radius;
     @include transition-ease;
+    
+    &:hover {
+        background: rgba(white, 0.1);
+    }
+    
+    &:focus-visible {
+        outline: 2px solid $secondary-color;
+        outline-offset: 2px;
+    }
 
     &__burger {
         position: absolute;
@@ -15,6 +28,7 @@
         width: 28px;
         height: 3px;
         background: set-text-color($primary-color);
+        border-radius: 2px;
         @include transition-ease;
 
         &::before {
@@ -24,6 +38,7 @@
             width: 28px;
             height: 3px;
             background: set-text-color($primary-color);
+            border-radius: 2px;
             @include transition-ease;
         }
 
@@ -34,6 +49,7 @@
             width: 20px;
             height: 3px;
             background: set-text-color($primary-color);
+            border-radius: 2px;
             @include transition-ease;
         }
 
@@ -60,6 +76,7 @@
     width: 100vw;
     opacity: 0.95;
     visibility: hidden;
+    backdrop-filter: blur(10px);
 
     &.open {
         visibility: visible;
@@ -73,6 +90,7 @@
         height: 100vh;
         overflow: hidden;
         background: $primary-color;
+        background: rgba($primary-color, 0.95);
         list-style-type: none;
         padding-right: 1rem;
         transform: translateY(-100%);
@@ -103,8 +121,24 @@
             font-weight: 300;
             @include transition-ease;
             
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 50%;
+                width: 0;
+                height: 2px;
+                background: $secondary-color;
+                transition: all $transition-medium;
+                transform: translateX(-50%);
+            }
+            
             &:hover {
                 color: $secondary-color;
+                
+                &::after {
+                    width: 100%;
+                }
             }
         }
 
@@ -114,5 +148,17 @@
 @for $i from 1 through 4 {
     .menu-nav__item:nth-child(#{$i}) {
         transition-delay: ($i * 0.1s) + 0.15s;
+    }
+}
+
+// Improved mobile menu accessibility
+@media (prefers-reduced-motion: reduce) {
+    .menu-btn__burger,
+    .nav,
+    .menu-nav,
+    .menu-nav__item,
+    .menu-nav__link {
+        transition: none;
+        animation: none;
     }
 }

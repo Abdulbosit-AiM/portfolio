@@ -1,45 +1,58 @@
 .projects {
-    padding-bottom: 2rem;
+    padding: $spacing-8 $spacing-4;
+    min-height: 100vh;
  
     &__bio-image {
         height: 30vh;
+        min-height: 250px;
         width: 100%;
         background:
-        linear-gradient(
-            to right,
-            rgba($primary-color, 0.9),
-            rgba($primary-color, 0.3)
-        ),
+        @include gradient-overlay(0.7),
         url(../img/model-1.jpg) center top;
         background-size: cover;
+        background-attachment: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
+        position: relative;
+        border-radius: $border-radius;
+        margin-bottom: $spacing-8;
+        overflow: hidden;
         
         .text-secondary {
-            font-size: 2rem;
-            margin-bottom: 2rem;
+            font-size: clamp($font-size-2xl, 4vw, $font-size-4xl);
+            margin-bottom: $spacing-6;
+            font-weight: 700;
+            text-shadow: 0 2px 10px rgba(black, 0.5);
+            position: relative;
+            z-index: 2;
         }
     }
 
 
     &__items {
-        width: 60vw;
-        margin: 2rem auto 0 auto;
+        width: min(95vw, 1200px);
+        margin: 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: $spacing-8;
     }
 
     &__item {
         position: relative;
-        border-bottom: 5px solid $secondary-color;
+        border-radius: $border-radius;
         overflow: hidden;
         cursor: pointer;
+        @include hover-lift;
+        background: lighten($primary-color, 5%);
+        box-shadow: $box-shadow;
 
         img {
             width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform $transition-medium;
         }
 
         &::after {
@@ -49,19 +62,29 @@
             left: 0;
             height: 100%;
             width: 100%;
-            background: $secondary-color;
+            background: linear-gradient(
+                135deg,
+                rgba($secondary-color, 0.9),
+                rgba($secondary-color, 0.7)
+            );
             opacity: 0;
-            @include transition-ease
+            @include transition-ease;
+            backdrop-filter: blur(5px);
         }
 
         &:hover {
+            img {
+                transform: scale(1.05);
+            }
+            
             &::after {
                 top: 0;
-                opacity: 0.9;
+                opacity: 1;
             }
 
             .projects__btn {
                 opacity: 1;
+                transform: translateY(0);
             }
         }
     }
@@ -76,16 +99,36 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         text-align: center;
+        gap: $spacing-4;
+        padding: $spacing-4;
     }
 
     &__btn {
         opacity: 0;
-        color: set-text-color($secondary-color);
+        color: black;
+        background: rgba(white, 0.9);
+        padding: $spacing-3 $spacing-4;
+        border-radius: $border-radius;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: $font-size-sm;
+        letter-spacing: 0.05em;
+        transform: translateY(20px);
         @include transition-ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: $spacing-2;
+        box-shadow: $box-shadow;
 
         &:hover {
-            color: set-text-color(
-                set-text-color($secondary-color));
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: $box-shadow-lg;
+        }
+        
+        i {
+            font-size: $font-size-base;
         }
     }
 
@@ -99,4 +142,18 @@ footer {
     transform: 
         rotate(90deg)
         translate(-3rem, -5rem);
+}
+
+// Project grid animations
+.projects__item {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+    &:nth-child(6) { animation-delay: 0.6s; }
 }

@@ -1,54 +1,114 @@
 .about {
-    padding-bottom: 2rem;
+    padding: $spacing-8 $spacing-4 $spacing-8;
+    min-height: 100vh;
  
     &__bio-image {
         height: 50vh;
+        min-height: 400px;
         width: 100%;
         background:
-        linear-gradient(
-            to right,
-            rgba($primary-color, 0.9),
-            rgba($primary-color, 0.3)
-        ),
+        @include gradient-overlay(0.8),
         url(../img/model-1.jpg) center top;
         background-size: cover;
+        background-attachment: fixed;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-end;
-    }
-
-    p {
-        margin-bottom: 2rem;
+        position: relative;
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: linear-gradient(
+                to top,
+                $primary-color,
+                transparent
+            );
+        }
     }
 
     &__bio {
         width: 80%;
+        max-width: 600px;
         text-align: center;
+        position: relative;
+        z-index: 2;
+        padding: $spacing-6;
+        @include card;
+        margin-bottom: $spacing-8;
 
         .text-secondary {
-            padding-bottom: 1rem;
+            padding-bottom: $spacing-4;
+            font-size: $font-size-2xl;
+            font-weight: 600;
+        }
+        
+        p {
+            font-size: $font-size-lg;
+            line-height: 1.8;
         }
     }
 
     .jobs {
-        width: 60vw;
-        margin: 2rem auto 0 auto;
+        width: min(90vw, 800px);
+        margin: $spacing-8 auto 0 auto;
         display: grid;
         grid-template-columns: 1fr;
-        grid-gap: 2rem;
+        grid-gap: $spacing-6;
 
         &__job {
-            background: lighten($primary-color, 10%);
-            padding: 0.5rem;
-            border-bottom: 5px solid $secondary-color;
+            @include card;
+            @include hover-lift;
+            border-left: 4px solid $secondary-color;
+            position: relative;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 4px;
+                height: 100%;
+                background: linear-gradient(
+                    to bottom,
+                    $secondary-color,
+                    lighten($secondary-color, 20%)
+                );
+                border-radius: 0 2px 2px 0;
+            }
 
             h2, h3 {
-                margin: 0.5rem 0;
+                margin: $spacing-2 0;
+            }
+            
+            h2 {
+                color: $secondary-color;
+                font-size: $font-size-lg;
+                font-weight: 500;
+            }
+            
+            h3 {
+                color: set-text-color($primary-color);
+                font-size: $font-size-xl;
+                font-weight: 600;
             }
 
             h6 {
-                margin: 0.3rem 0;
+                margin: $spacing-1 0 $spacing-3;
+                color: $text-muted;
+                font-size: $font-size-sm;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            
+            p {
+                color: lighten(set-text-color($primary-color), 5%);
+                line-height: 1.6;
             }
         }
     }
@@ -63,4 +123,29 @@
             rotate(90deg)
             translate(-3rem, -5rem);
     }
+}
+
+// Enhanced animations
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.about__bio {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.jobs__job {
+    opacity: 0;
+    animation: slideInLeft 0.6s ease-out forwards;
+    
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
 }

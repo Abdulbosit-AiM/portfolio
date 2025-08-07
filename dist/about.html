@@ -4,24 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Abdulbosit Melikuziev</title>
+    <title>About - Abdulbosit Melikuziev</title>
+    <meta name="description" content="Learn about Abdulbosit Melikuziev's background, experience, and expertise in web development and IT instruction.">
     <link rel="shortcut icon" href="./img/briefcase.png" type="image/x-icon">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
-        <div class="menu-btn" > 
+        <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
             <span class="menu-btn__burger"></span>
-        </div>
+        </button>
 
-        <nav class="nav">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
             <ul class="menu-nav">
                 <li class="menu-nav__item ">
                     <a href="index.html" class="menu-nav__link">Home</a>
                 </li>
                 <li class="menu-nav__item active">
-                    <a href="about.html" class="menu-nav__link">About Me</a>
+                    <a href="about.html" class="menu-nav__link" aria-current="page">About Me</a>
                 </li>
                 <li class="menu-nav__item">
                     <a href="projects.html" class="menu-nav__link">Projects</a>
@@ -34,15 +39,15 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="about">
             <div class="about__bio-image">
                 <div class="about__bio">
-                    <h2 class="text-secondary">BIO</h2>
+                    <h2 class="text-secondary">About Me</h2>
                     <p>
-                        Assalamu Alaykum, my name is Abdulbosit.
-                        I have more than 3 years of programming experience.<br>
-                        I work using technologies like HTML&CSS, Bootstrap, SASS, JavaScript/React, Python/Django
+                        Hello! I'm Abdulbosit, a passionate web developer and IT instructor with over 3 years of programming experience. 
+                        I specialize in modern web technologies including HTML5, CSS3, SASS, JavaScript, React, Python, and Django. 
+                        I'm dedicated to creating exceptional digital experiences and sharing knowledge with the next generation of developers.
                     </p>
                 </div>
             </div>
@@ -53,41 +58,57 @@
                     <h3>CODDY</h3>
                     <h6>IT-instructor</h6>
                     <p>
-                        Teaching IT mainly to a younger generation. Mentoring kids in spheres of Computer Literacy, Web-development etc.
+                        Led comprehensive IT education programs for young learners, focusing on computer literacy, 
+                        web development fundamentals, and programming concepts. Developed engaging curricula that 
+                        made complex technical concepts accessible to students of all skill levels.
                     </p>
                 </div>
-
-                <!-- <div class="jobs__job">
-                    <h2 class="text-secondary">2015 - 2017</h2>
-                    <h3>Microsoft</h3>
-                    <h6>Front-End Developer</h6>
-                    <p>
-                        This ain't real 
-                    </p>
-                </div>
-
+                
                 <div class="jobs__job">
-                    <h2 class="text-secondary">2012 - 2015</h2>
-                    <h3>Web Design Co.</h3>
-                    <h6>Grapgic designer</h6>
+                    <h2 class="text-secondary">2020-2021</h2>
+                    <h3>Freelance Developer</h3>
+                    <h6>Web Development</h6>
                     <p>
-                        This ain't real either.
+                        Delivered custom web solutions for various clients, specializing in responsive design, 
+                        modern JavaScript frameworks, and performance optimization. Built scalable applications 
+                        using React, Django, and modern development practices.
                     </p>
-                </div> -->
+                </div>
+                
+                <div class="jobs__job">
+                    <h2 class="text-secondary">2019-2020</h2>
+                    <h3>Self-Taught Journey</h3>
+                    <h6>Continuous Learning</h6>
+                    <p>
+                        Embarked on an intensive self-learning journey, mastering web development fundamentals 
+                        through online courses, documentation, and hands-on projects. Built a strong foundation 
+                        in programming principles and modern development workflows.
+                    </p>
+                </div>
             </div>
 
-            <div class="social-icons">
-                <a href="https://www.facebook.com/abdulbosit.melikuziev.7"><i class="fab fa-2x fa-facebook-square"></i></a>
-                <a href="https://www.instagram.com/abdulbosit.melikuziev/"><i class="fab fa-2x fa-instagram-square"></i></a>
-                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ"><i class="fab fa-2x fa-youtube-square"></i></a>
-                <a href="https://github.com/Abdulbosit-AiM"><i class="fab fa-2x fa-github-square"></i></a>
-                <a href="https://t.me/abdulbositmelikuziev"><i class="fab fa-2x fa-telegram"></i></a>
+            <div class="social-icons social-icons--vertical">
+                <a href="https://www.facebook.com/abdulbosit.melikuziev.7" aria-label="Facebook Profile">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/abdulbosit.melikuziev/" aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ" aria-label="YouTube Channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://github.com/Abdulbosit-AiM" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/abdulbositmelikuziev" aria-label="Telegram Contact">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
                 
             </div>
         </section>
     </main>
 
-    <footer>&copy; Copyright 2019</footer>
+    <footer>&copy; 2025 Abdulbosit Melikuziev. All rights reserved.</footer>
 
     <script src="https://kit.fontawesome.com/f206fb5119.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>

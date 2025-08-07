@@ -4,20 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AiM - Portfolio</title>
+    <title>Abdulbosit Melikuziev - Web Developer & IT Instructor</title>
+    <meta name="description" content="Portfolio of Abdulbosit Melikuziev - Web Developer, IT Instructor, and Programmer specializing in modern web technologies.">
+    <meta name="keywords" content="web developer, IT instructor, programmer, portfolio, HTML, CSS, JavaScript, React, Python, Django">
+    <meta name="author" content="Abdulbosit Melikuziev">
     <link rel="shortcut icon" href="./img/briefcase.png" type="image/x-icon">
-     <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <header>
-        <div class="menu-btn" > 
+        <button class="menu-btn" aria-label="Toggle navigation menu" aria-expanded="false">
             <span class="menu-btn__burger"></span>
-        </div>
+        </button>
 
-        <nav class="nav">
+        <nav class="nav" role="navigation" aria-label="Main navigation">
             <ul class="menu-nav">
                 <li class="menu-nav__item active">
-                    <a href="index.html" class="menu-nav__link">Home</a>
+                    <a href="index.html" class="menu-nav__link" aria-current="page">Home</a>
                 </li>
                 <li class="menu-nav__item">
                     <a href="about.html" class="menu-nav__link">About Me</a>
@@ -33,26 +41,36 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content">
         <section class="home">
-            <h2>Assalamu Alaykum! My name is</h2>
+            <h2>Hello! My name is</h2>
             <h1 class="home__name">
                 Abdulbosit <span class="home__name--last">Melikuziev</span>
             </h1>
-            <h2>Web-Developer, IT-instructor & Programmer</h2>
+            <p class="home__subtitle">Web Developer, IT Instructor & Programmer passionate about creating exceptional digital experiences</p>
 
-            <div class="social-icons">
-                <a href="https://www.facebook.com/abdulbosit.melikuziev.7"><i class="fab fa-2x fa-facebook-square"></i></a>
-                <a href="https://www.instagram.com/abdulbosit.melikuziev/"><i class="fab fa-2x fa-instagram-square"></i></a>
-                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ"><i class="fab fa-2x fa-youtube-square"></i></a>
-                <a href="https://github.com/Abdulbosit-AiM"><i class="fab fa-2x fa-github-square"></i></a>
-                <a href="https://t.me/abdulbositmelikuziev"><i class="fab fa-2x fa-telegram"></i></a>
+            <div class="social-icons social-icons--vertical">
+                <a href="https://www.facebook.com/abdulbosit.melikuziev.7" aria-label="Facebook Profile">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/abdulbosit.melikuziev/" aria-label="Instagram Profile">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ" aria-label="YouTube Channel">
+                    <i class="fab fa-youtube"></i>
+                </a>
+                <a href="https://github.com/Abdulbosit-AiM" aria-label="GitHub Profile">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://t.me/abdulbositmelikuziev" aria-label="Telegram Contact">
+                    <i class="fab fa-telegram-plane"></i>
+                </a>
                 
             </div>
         </section>
     </main>
 
-    <footer>&copy; Copyright 2019</footer>
+    <footer>&copy; 2025 Abdulbosit Melikuziev. All rights reserved.</footer>
 
     <script src="https://kit.fontawesome.com/f206fb5119.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
