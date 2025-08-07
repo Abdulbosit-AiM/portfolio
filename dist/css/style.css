@@ -1,10 +1,10 @@
-/* Error: $color: set-text-color(#272727) is not a color.
- *    ,
- * 38 |     color: lighten(set-text-color($primary-color), 10%);
- *    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   scss/_base.scss 38:12  @import
- *   scss/style.scss 2:9    root stylesheet */
+/* Error: Undefined variable.
+ *   ,
+ * 5 |     background-color: $primary-color;
+ *   |                       ^^^^^^^^^^^^^^
+ *   '
+ *   scss/_base.scss 5:23  @use
+ *   scss/style.scss 2:1   root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: $color: set-text-color(#272727) is not a color.\a    \2577 \a 38 \2502      color: lighten(set-text-color($primary-color), 10%);\a    \2502             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   scss/_base.scss 38:12  @import\a   scss/style.scss 2:9    root stylesheet";
+  content: "Error: Undefined variable.\a   \2577 \a 5 \2502      background-color: $primary-color;\a   \2502                        ^^^^^^^^^^^^^^\a   \2575 \a   scss/_base.scss 5:23  @use\a   scss/style.scss 2:1   root stylesheet";
 }

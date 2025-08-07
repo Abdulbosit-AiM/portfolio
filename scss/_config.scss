@@ -3,11 +3,11 @@
     transition: all 0.3s ease-in-out;
 }
 
-@mixin set-text-color($color) {
+@function set-text-color($color) {
     @if (lightness($color) > 40%) {
-        color: #000;
+        @return #000;
     } @else {
-        color: #fff;
+        @return #fff;
     }
 }
 
