@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Abdulbosit Melikuziev</title>
-    <meta name="description" content="Explore the portfolio of web development projects by Abdulbosit Melikuziev, featuring modern JavaScript applications and creative solutions.">
-    <link rel="shortcut icon" href="./img/briefcase.png" type="image/x-icon">
+    <meta name="description" content="Explore the portfolio of projects by Abdulbosit Melikuziev, featuring modern web applications and innovative solutions.">
+    <link rel="icon" href="./img/briefcase.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -26,120 +25,168 @@
                     <a href="index.html" class="menu-nav__link">Home</a>
                 </li>
                 <li class="menu-nav__item">
-                    <a href="about.html" class="menu-nav__link">About Me</a>
+                    <a href="about.html" class="menu-nav__link">About</a>
                 </li>
                 <li class="menu-nav__item active">
                     <a href="projects.html" class="menu-nav__link" aria-current="page">Projects</a>
                 </li>
                 <li class="menu-nav__item">
-                    <a href="contact.html" class="menu-nav__link">Contact Me</a>
+                    <a href="contact.html" class="menu-nav__link">Contact</a>
                 </li>
-
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <section class="projects">
-            <div class="projects__bio-image">
-                <h1 class="text-secondary">My Projects</h1>
+            <div class="projects__hero">
+                <h1>My Projects</h1>
+                <p>A collection of web applications and innovative solutions I've built</p>
             </div>
 
-            <div class="projects__items">
-                <!-- weather react -->
-                <div class="projects__item">
-                    <img src="./img/project-1.png" alt="Ten JavaScript Projects - Collection of interactive web applications" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/ten-js-projects/" class="projects__btn" aria-label="View Ten JavaScript Projects live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/ten-js-projects" class="projects__btn" aria-label="View Ten JavaScript Projects source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+            <div class="projects__grid">
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-1.png" alt="Ten JavaScript Projects - Collection of interactive web applications" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/ten-js-projects/" class="btn btn--primary" aria-label="View Ten JavaScript Projects live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/ten-js-projects" class="btn btn--secondary" aria-label="View Ten JavaScript Projects source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Ten JavaScript Projects</h3>
+                        <p>A comprehensive collection of interactive web applications showcasing various JavaScript concepts and modern development practices.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">JavaScript</span>
+                            <span class="tech-tags__tag">HTML5</span>
+                            <span class="tech-tags__tag">CSS3</span>
+                        </div>
+                    </div>
+                </article>
                 
-                <!-- weather js -->
-                <div class="projects__item">
-                    <img src="./img/project-2.png" alt="Weather App - JavaScript weather application with real-time data" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/weather-app-js/" class="projects__btn" aria-label="View Weather App live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/weather-app-js" class="projects__btn" aria-label="View Weather App source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-2.png" alt="Weather App - JavaScript weather application with real-time data" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/weather-app-js/" class="btn btn--primary" aria-label="View Weather App live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/weather-app-js" class="btn btn--secondary" aria-label="View Weather App source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Weather Application</h3>
+                        <p>Real-time weather application with location-based forecasts, interactive maps, and responsive design.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">JavaScript</span>
+                            <span class="tech-tags__tag">API Integration</span>
+                            <span class="tech-tags__tag">Geolocation</span>
+                        </div>
+                    </div>
+                </article>
 
-                <!-- bootstrap+sass -->
-                <div class="projects__item">
-                    <img src="./img/project-3.png" alt="Bootstrap SASS Project - Modern responsive website built with Bootstrap and SASS" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/bootstrap5-sass/" class="projects__btn" aria-label="View Bootstrap SASS project live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/bootstrap5-sass" class="projects__btn" aria-label="View Bootstrap SASS project source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-3.png" alt="Bootstrap SASS Project - Modern responsive website" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/bootstrap5-sass/" class="btn btn--primary" aria-label="View Bootstrap SASS project live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/bootstrap5-sass" class="btn btn--secondary" aria-label="View Bootstrap SASS project source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Bootstrap SASS Project</h3>
+                        <p>Modern responsive website built with Bootstrap 5 and SASS, featuring custom components and optimized performance.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">Bootstrap 5</span>
+                            <span class="tech-tags__tag">SASS</span>
+                            <span class="tech-tags__tag">Responsive</span>
+                        </div>
+                    </div>
+                </article>
 
-                <!-- to do list -->
-                <div class="projects__item">
-                    <img src="./img/project-4.png" alt="To-Do List App - Task management application with local storage" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/to-do-list-js/" class="projects__btn" aria-label="View To-Do List app live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/to-do-list-js" class="projects__btn" aria-label="View To-Do List app source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-4.png" alt="To-Do List App - Task management application" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/to-do-list-js/" class="btn btn--primary" aria-label="View To-Do List app live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/to-do-list-js" class="btn btn--secondary" aria-label="View To-Do List app source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Task Management App</h3>
+                        <p>Feature-rich to-do list application with local storage, drag-and-drop functionality, and priority management.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">JavaScript</span>
+                            <span class="tech-tags__tag">Local Storage</span>
+                            <span class="tech-tags__tag">Drag & Drop</span>
+                        </div>
+                    </div>
+                </article>
 
-                <!-- calculator -->
-                <div class="projects__item">
-                    <img src="./img/project-5.png" alt="Modern Calculator - JavaScript calculator with advanced mathematical functions" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/modern-js-calculator/" class="projects__btn" aria-label="View Modern Calculator live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/modern-js-calculator" class="projects__btn" aria-label="View Modern Calculator source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-5.png" alt="Modern Calculator - JavaScript calculator with advanced functions" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/modern-js-calculator/" class="btn btn--primary" aria-label="View Modern Calculator live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/modern-js-calculator" class="btn btn--secondary" aria-label="View Modern Calculator source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Modern Calculator</h3>
+                        <p>Advanced calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">JavaScript</span>
+                            <span class="tech-tags__tag">Math.js</span>
+                            <span class="tech-tags__tag">Keyboard Events</span>
+                        </div>
+                    </div>
+                </article>
 
-                <!-- analog clock -->
-                <div class="projects__item">
-                    <img src="./img/project-6.png" alt="Analog Clock - Real-time analog clock built with JavaScript" loading="lazy">
-                    <div class="projects__btns">
-                        <a href="https://abdulbosit-aim.github.io/simple-analog-clock-js/" class="projects__btn" aria-label="View Analog Clock live demo">
-                            <i class="fas fa-eye"></i>Preview
-                        </a>
-    
-                        <a href="https://github.com/Abdulbosit-AiM/simple-analog-clock-js" class="projects__btn" aria-label="View Analog Clock source code">
-                            <i class="fab fa-github"></i>GitHub
-                        </a>
+                <article class="projects__card animate-on-scroll">
+                    <div class="projects__card__image">
+                        <img src="./img/project-6.png" alt="Analog Clock - Real-time analog clock built with JavaScript" loading="lazy">
+                        <div class="projects__card__floating-actions">
+                            <a href="https://abdulbosit-aim.github.io/simple-analog-clock-js/" class="btn btn--primary" aria-label="View Analog Clock live demo">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                            <a href="https://github.com/Abdulbosit-AiM/simple-analog-clock-js" class="btn btn--secondary" aria-label="View Analog Clock source code">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
+                    <div class="projects__card__content">
+                        <h3>Analog Clock</h3>
+                        <p>Beautiful real-time analog clock with smooth animations, customizable themes, and timezone support.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tags__tag">JavaScript</span>
+                            <span class="tech-tags__tag">Canvas API</span>
+                            <span class="tech-tags__tag">Animations</span>
+                        </div>
+                    </div>
+                </article>
             </div>
 
             <div class="social-icons">
-                <a href="https://www.facebook.com/abdulbosit.melikuziev.7" aria-label="Facebook Profile">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/abdulbosit.melikuziev/" aria-label="Instagram Profile">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ" aria-label="YouTube Channel">
-                    <i class="fab fa-youtube"></i>
+                <a href="https://www.linkedin.com/in/abdulbosit-melikuziev" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://github.com/Abdulbosit-AiM" aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
@@ -147,7 +194,9 @@
                 <a href="https://t.me/abdulbositmelikuziev" aria-label="Telegram Contact">
                     <i class="fab fa-telegram-plane"></i>
                 </a>
-                
+                <a href="mailto:abdulbosit.melikuziev@gmail.com" aria-label="Email Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </section>
     </main>

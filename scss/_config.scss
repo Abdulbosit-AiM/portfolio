@@ -1,126 +1,225 @@
 @use "sass:color";
+@use "sass:math";
 
-// Variables
-$primary-color: #272727;
-$secondary-color: #ff652f;
+// Design tokens - Modern color system
+:root {
+  // Primary palette
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e0f2fe;
+  --color-primary-200: #bae6fd;
+  --color-primary-300: #7dd3fc;
+  --color-primary-400: #38bdf8;
+  --color-primary-500: #0ea5e9;
+  --color-primary-600: #0284c7;
+  --color-primary-700: #0369a1;
+  --color-primary-800: #075985;
+  --color-primary-900: #0c4a6e;
+  --color-primary-950: #082f49;
 
-// Spacing variables
-$spacing-1: 0.25rem;
-$spacing-2: 0.5rem;
-$spacing-3: 0.75rem;
-$spacing-4: 1rem;
-$spacing-5: 1.25rem;
-$spacing-6: 1.5rem;
-$spacing-8: 2rem;
-$spacing-10: 2.5rem;
-$spacing-12: 3rem;
-$spacing-16: 4rem;
-$spacing-20: 5rem;
-$spacing-24: 6rem;
+  // Neutral palette
+  --color-neutral-50: #fafafa;
+  --color-neutral-100: #f5f5f5;
+  --color-neutral-200: #e5e5e5;
+  --color-neutral-300: #d4d4d4;
+  --color-neutral-400: #a3a3a3;
+  --color-neutral-500: #737373;
+  --color-neutral-600: #525252;
+  --color-neutral-700: #404040;
+  --color-neutral-800: #262626;
+  --color-neutral-900: #171717;
+  --color-neutral-950: #0a0a0a;
 
-// Font size variables
-$font-size-sm: 0.875rem;
-$font-size-base: 1rem;
-$font-size-lg: 1.125rem;
-$font-size-xl: 1.25rem;
-$font-size-2xl: 1.5rem;
-$font-size-3xl: 1.875rem;
-$font-size-4xl: 2.25rem;
-$font-size-5xl: 3rem;
+  // Accent colors
+  --color-accent-orange: #f97316;
+  --color-accent-emerald: #10b981;
+  --color-accent-purple: #8b5cf6;
+  --color-accent-pink: #ec4899;
 
-// Border and shadow variables
-$border-radius: 0.375rem;
-$box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-$box-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  // Semantic colors
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-error: #ef4444;
 
-// Transition variables
-$transition-fast: all 0.15s ease-in-out;
-$transition-medium: all 0.3s ease-in-out;
+  // Typography
+  --font-family-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
 
-// Color variables
-$text-muted: #6b7280;
+  // Font sizes - Fluid typography
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.2vw, 0.875rem);
+  --font-size-sm: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  --font-size-base: clamp(1rem, 0.9rem + 0.4vw, 1.125rem);
+  --font-size-lg: clamp(1.125rem, 1rem + 0.5vw, 1.25rem);
+  --font-size-xl: clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem);
+  --font-size-2xl: clamp(1.5rem, 1.3rem + 0.8vw, 2rem);
+  --font-size-3xl: clamp(1.875rem, 1.6rem + 1vw, 2.5rem);
+  --font-size-4xl: clamp(2.25rem, 2rem + 1.2vw, 3rem);
+  --font-size-5xl: clamp(3rem, 2.5rem + 2vw, 4rem);
+
+  // Spacing scale
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  // Border radius
+  --radius-sm: 0.25rem;
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+  --radius-full: 9999px;
+
+  // Shadows
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  // Transitions
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Z-index scale
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal: 1040;
+  --z-popover: 1050;
+  --z-tooltip: 1060;
+}
+
+// Dark mode support
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--color-neutral-950);
+    --color-foreground: var(--color-neutral-50);
+    --color-muted: var(--color-neutral-400);
+    --color-border: var(--color-neutral-800);
+  }
+}
+
+// Light mode (default)
+:root {
+  --color-background: var(--color-neutral-50);
+  --color-foreground: var(--color-neutral-950);
+  --color-muted: var(--color-neutral-600);
+  --color-border: var(--color-neutral-200);
+}
+
+// Legacy variables for compatibility
+$primary-color: #0c4a6e;
+$secondary-color: #f97316;
 $text-light: #ffffff;
-$text-dark: #1f2937;
+$text-dark: #171717;
+$text-muted: #737373;
+
+// Spacing
+$spacing-1: var(--space-1);
+$spacing-2: var(--space-2);
+$spacing-3: var(--space-3);
+$spacing-4: var(--space-4);
+$spacing-5: var(--space-5);
+$spacing-6: var(--space-6);
+$spacing-8: var(--space-8);
+$spacing-10: var(--space-10);
+$spacing-12: var(--space-12);
+$spacing-16: var(--space-16);
+$spacing-20: var(--space-20);
+$spacing-24: var(--space-24);
+
+// Typography
+$font-size-xs: var(--font-size-xs);
+$font-size-sm: var(--font-size-sm);
+$font-size-base: var(--font-size-base);
+$font-size-lg: var(--font-size-lg);
+$font-size-xl: var(--font-size-xl);
+$font-size-2xl: var(--font-size-2xl);
+$font-size-3xl: var(--font-size-3xl);
+$font-size-4xl: var(--font-size-4xl);
+$font-size-5xl: var(--font-size-5xl);
+
+// Border and effects
+$border-radius: var(--radius);
+$box-shadow: var(--shadow);
+$box-shadow-lg: var(--shadow-lg);
+$transition-fast: var(--transition-fast);
+$transition-medium: var(--transition-normal);
 
 // Functions
 @function set-text-color($color) {
-    @if (color.lightness($color) > 40%) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-}
-
-@function gradient-overlay($opacity) {
-    @return linear-gradient(
-        to bottom,
-        rgba($primary-color, $opacity),
-        rgba($primary-color, $opacity * 0.8)
-    );
+  @if (color.lightness($color) > 50%) {
+    @return #000;
+  } @else {
+    @return #fff;
+  }
 }
 
 // Mixins
 @mixin transition-ease {
-    transition: all 0.3s ease-in-out;
-}
-
-@mixin visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-
-@mixin button-reset {
-    background: none;
-    border: none;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    font: inherit;
+  transition: all var(--transition-normal);
 }
 
 @mixin hover-lift {
-    transition: transform 0.2s ease-in-out;
-    
-    &:hover {
-        transform: translateY(-2px);
-    }
+  transition: transform var(--transition-fast);
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 @mixin card {
-    background: #fff;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    padding: $spacing-6;
+  background: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-6);
+  border: 1px solid var(--color-border);
 }
 
-// Media query mixins
+@mixin gradient-overlay($opacity: 0.7) {
+  background: linear-gradient(
+    135deg,
+    rgba($primary-color, $opacity),
+    rgba($primary-color, $opacity * 0.8)
+  );
+}
+
+// Media queries
+@mixin media-sm {
+  @media (min-width: 640px) {
+    @content;
+  }
+}
+
 @mixin media-md {
-    @media (min-width: 768px) {
-        @content;
-    }
+  @media (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin media-lg {
-    @media (min-width: 1024px) {
-        @content;
-    }
+  @media (min-width: 1024px) {
+    @content;
+  }
 }
 
 @mixin media-xl {
-    @media (min-width: 1280px) {
-        @content;
-    }
+  @media (min-width: 1280px) {
+    @content;
+  }
 }
 
 @mixin media-2xl {
-    @media (min-width: 1536px) {
-        @content;
-    }
+  @media (min-width: 1536px) {
+    @content;
+  }
 }

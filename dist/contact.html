@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Abdulbosit Melikuziev</title>
-    <meta name="description" content="Get in touch with Abdulbosit Melikuziev for web development projects, IT instruction, or collaboration opportunities.">
-    <link rel="shortcut icon" href="./img/briefcase.png" type="image/x-icon">
+    <meta name="description" content="Get in touch with Abdulbosit Melikuziev for product management opportunities, AI projects, or collaboration.">
+    <link rel="icon" href="./img/briefcase.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -26,63 +25,62 @@
                     <a href="index.html" class="menu-nav__link">Home</a>
                 </li>
                 <li class="menu-nav__item">
-                    <a href="about.html" class="menu-nav__link">About Me</a>
+                    <a href="about.html" class="menu-nav__link">About</a>
                 </li>
                 <li class="menu-nav__item">
                     <a href="projects.html" class="menu-nav__link">Projects</a>
                 </li>
                 <li class="menu-nav__item active">
-                    <a href="contact.html" class="menu-nav__link" aria-current="page">Contact Me</a>
+                    <a href="contact.html" class="menu-nav__link" aria-current="page">Contact</a>
                 </li>
-
             </ul>
         </nav>
     </header>
 
     <main id="main-content">
         <section class="contact">
-            
-            <h2>Let's Connect</h2>
+            <div class="contact__hero">
+                <h1>Let's Connect</h1>
+                <p>Ready to collaborate on innovative projects and digital solutions</p>
+            </div>
 
-            <div class="contact__list">
-                <div class="contact__item">
-                    <i class="fas fa-envelope"></i> E-mail
-                    <div class="contact__label">Email</div>
-                    <div class="contact__value">
-                        <a href="mailto:abdulbosit.melikuziev@gmail.com" class="text-secondary">
+            <div class="contact__grid">
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="contact__card__label">Email</div>
+                    <div class="contact__card__value">
+                        <a href="mailto:abdulbosit.melikuziev@gmail.com">
                             abdulbosit.melikuziev@gmail.com
                         </a>
                     </div>
                 </div>
                 
-                <div class="contact__item">
-                    <i class="fas fa-phone"></i>
-                    <div class="contact__label">Phone</div>
-                    <div class="contact__value">
-                        <a href="tel:+447884607553" class="text-secondary">0788-460-7553</a>
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <div class="contact__card__label">Phone</div>
+                    <div class="contact__card__value">
+                        <a href="tel:+447884607553">0788-460-7553</a>
                     </div>
                 </div>
 
-                <div class="contact__item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <div class="contact__label">Location</div>
-                    <div class="contact__value">
-                        <span class="text-secondary">London, UK</span>    
+                <div class="contact__card">
+                    <div class="contact__card__icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact__card__label">Location</div>
+                    <div class="contact__card__value">
+                        <span>London, UK</span>
                     </div>
                 </div>
-
-
             </div>
 
             <div class="social-icons">
-                <a href="https://www.facebook.com/abdulbosit.melikuziev.7" aria-label="Facebook Profile">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="https://www.instagram.com/abdulbosit.melikuziev/" aria-label="Instagram Profile">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="https://www.youtube.com/channel/UC7QsiT4Yo6v6CwbfeuNl3EQ" aria-label="YouTube Channel">
-                    <i class="fab fa-youtube"></i>
+                <a href="https://www.linkedin.com/in/abdulbosit-melikuziev" aria-label="LinkedIn Profile">
+                    <i class="fab fa-linkedin-in"></i>
                 </a>
                 <a href="https://github.com/Abdulbosit-AiM" aria-label="GitHub Profile">
                     <i class="fab fa-github"></i>
@@ -90,7 +88,9 @@
                 <a href="https://t.me/abdulbositmelikuziev" aria-label="Telegram Contact">
                     <i class="fab fa-telegram-plane"></i>
                 </a>
-                
+                <a href="mailto:abdulbosit.melikuziev@gmail.com" aria-label="Email Contact">
+                    <i class="fas fa-envelope"></i>
+                </a>
             </div>
         </section>
     </main>
@@ -99,6 +99,5 @@
 
     <script src="https://kit.fontawesome.com/f206fb5119.js" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
-
 </body>
 </html>

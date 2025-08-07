@@ -1,128 +1,228 @@
-// Reusable component styles
+// Modern component library
 
+// Enhanced social icons
 .social-icons {
+  display: flex;
+  gap: var(--space-4);
+  
+  a {
     display: flex;
-    gap: $spacing-4;
-    
-    a {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 48px;
-        height: 48px;
-        background: rgba(white, 0.1);
-        border-radius: $border-radius;
-        transition: all $transition-medium;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(white, 0.1);
-        
-        &:hover {
-            background: rgba($secondary-color, 0.2);
-            border-color: rgba($secondary-color, 0.3);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba($secondary-color, 0.2);
-        }
-        
-        i {
-            font-size: $font-size-xl;
-            color: $text-light;
-            transition: color $transition-fast;
-        }
-        
-        &:hover i {
-            color: $secondary-color;
-        }
-    }
-    
-    // Vertical layout for specific pages
-    &--vertical {
-        flex-direction: column;
-        position: fixed;
-        bottom: $spacing-4;
-        left: $spacing-4;
-        z-index: 10;
-        
-        @media (min-width: 768px) {
-            position: static;
-            flex-direction: row;
-            justify-content: center;
-        }
-    }
-}
-
-// Enhanced footer
-footer {
-    font-size: $font-size-sm;
-    position: fixed;
-    bottom: $spacing-4;
-    right: $spacing-4;
-    text-align: right;
-    padding: $spacing-3;
-    color: $text-muted;
-    background: rgba($primary-color, 0.8);
-    border-radius: $border-radius;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(white, 0.1);
-    z-index: 10;
+    position: relative;
+    overflow: hidden;
     
-    @media (min-width: 768px) {
-        transform: none;
-        position: static;
-        background: transparent;
-        border: none;
-        backdrop-filter: none;
-        text-align: center;
-        margin-top: $spacing-8;
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--color-accent-orange), var(--color-accent-pink));
+      opacity: 0;
+      transition: opacity var(--transition-fast);
     }
+    
+    &:hover {
+      transform: translateY(-2px) scale(1.05);
+      border-color: rgba(255, 255, 255, 0.3);
+      box-shadow: var(--shadow-lg);
+      
+      &::before {
+        opacity: 1;
+      }
+      
+      i {
+        color: white;
+        transform: scale(1.1);
+      }
+    }
+    
+    i {
+      font-size: var(--font-size-xl);
+      color: var(--color-neutral-300);
+      transition: all var(--transition-fast);
+      position: relative;
+      z-index: 1;
+    }
+  }
+  
+  &--vertical {
+    flex-direction: column;
+    position: fixed;
+    bottom: var(--space-6);
+    left: var(--space-6);
+    z-index: var(--z-fixed);
+    
+    @include media-md {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
 }
 
-// Loading spinner component
-.spinner {
-    display: inline-block;
+// Modern footer
+footer {
+  position: fixed;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--font-size-xs);
+  color: var(--color-neutral-300);
+  z-index: var(--z-fixed);
+  
+  @include media-md {
+    position: static;
+    background: transparent;
+    border: none;
+    backdrop-filter: none;
+    text-align: center;
+    margin-top: var(--space-8);
+    padding: var(--space-6) 0;
+  }
+}
+
+// Loading states
+.loading {
+  position: relative;
+  pointer-events: none;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 20px;
     height: 20px;
-    border: 2px solid rgba($secondary-color, 0.3);
-    border-radius: 50%;
-    border-top-color: $secondary-color;
-    animation: spin 1s ease-in-out infinite;
+    margin: -10px 0 0 -10px;
+    border: 2px solid transparent;
+    border-top: 2px solid var(--color-accent-orange);
+    border-radius: var(--radius-full);
+    animation: spin 1s linear infinite;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 // Card component
 .card {
-    @include card;
-    @include hover-lift;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-2xl);
+  padding: var(--space-6);
+  transition: all var(--transition-normal);
+  
+  &:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  &--highlight {
+    border-color: rgba(249, 115, 22, 0.3);
+    background: rgba(249, 115, 22, 0.05);
+  }
 }
 
-// Button variants
-.btn-ghost {
-    background: transparent;
-    color: $secondary-color;
-    border: 1px solid rgba($secondary-color, 0.3);
-    
-    &:hover {
-        background: rgba($secondary-color, 0.1);
-        border-color: $secondary-color;
-    }
+// Badge component
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: var(--space-1) var(--space-3);
+  background: rgba(249, 115, 22, 0.2);
+  color: var(--color-accent-orange);
+  border-radius: var(--radius-full);
+  font-size: var(--font-size-xs);
+  font-weight: 600;
+  border: 1px solid rgba(249, 115, 22, 0.3);
+  
+  &--success {
+    background: rgba(34, 197, 94, 0.2);
+    color: var(--color-success);
+    border-color: rgba(34, 197, 94, 0.3);
+  }
+  
+  &--warning {
+    background: rgba(245, 158, 11, 0.2);
+    color: var(--color-warning);
+    border-color: rgba(245, 158, 11, 0.3);
+  }
 }
 
-// Improved accessibility
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
+// Progress indicator
+.progress {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  
+  &__bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-accent-orange), var(--color-accent-pink));
+    border-radius: var(--radius-full);
+    transition: width var(--transition-slow);
+  }
 }
 
-// High contrast mode support
-@media (prefers-contrast: high) {
-    .social-icons a {
-        border: 2px solid currentColor;
-    }
-    
-    .projects__item {
-        border: 2px solid $secondary-color;
-    }
+// Tooltip
+.tooltip {
+  position: relative;
+  
+  &::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-fast);
+    z-index: var(--z-tooltip);
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+// Intersection observer animations
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &.in-view {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// Focus management
+.focus-trap {
+  &:focus-within {
+    outline: 2px solid var(--color-accent-orange);
+    outline-offset: 2px;
+  }
 }
