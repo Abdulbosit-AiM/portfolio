@@ -9,7 +9,7 @@
     text-align: center;
     position: relative;
     background:
-        @include gradient-overlay(0.8),
+        gradient-overlay(0.8),
         url(../img/model-1.jpg) center top;
     background-size: cover;
     background-attachment: fixed;

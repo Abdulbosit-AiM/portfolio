@@ -1,10 +1,10 @@
-/* Error: Undefined mixin.
- *   ,
- * 9 |     @include transition-ease;
- *   |     ^^^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   scss/_config.scss 9:5  @import
- *   scss/style.scss 1:9    root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 18 |     margin-bottom: $spacing-4;
+ *    |                    ^^^^^^^^^^
+ *    '
+ *   scss/_base.scss 18:20  @import
+ *   scss/style.scss 2:9    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a   \2577 \a 9 \2502      @include transition-ease;\a   \2502      ^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss/_config.scss 9:5  @import\a   scss/style.scss 1:9    root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 18 \2502      margin-bottom: $spacing-4;\a    \2502                     ^^^^^^^^^^\a    \2575 \a   scss/_base.scss 18:20  @import\a   scss/style.scss 2:9    root stylesheet";
 }

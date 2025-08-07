@@ -15,6 +15,15 @@
 $primary-color: #272727;
 $secondary-color: #ff652f;
 
+// Functions
+@function gradient-overlay($opacity) {
+    @return linear-gradient(
+        to bottom,
+        rgba($primary-color, $opacity),
+        rgba($primary-color, $opacity * 0.8)
+    );
+}
+
 .menu-btn {
     position: absolute;
     z-index: 1;
