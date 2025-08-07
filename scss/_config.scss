@@ -1,3 +1,20 @@
+// Mixins
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
+@mixin set-text-color($color) {
+    @if (lightness($color) > 40%) {
+        color: #000;
+    } @else {
+        color: #fff;
+    }
+}
+
+// Variables
+$primary-color: #272727;
+$secondary-color: #ff652f;
+
 .menu-btn {
     position: absolute;
     z-index: 1;
