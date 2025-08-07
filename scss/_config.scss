@@ -1,18 +1,5 @@
 @use "sass:color";
 
-// Mixins
-@mixin transition-ease {
-    transition: all 0.3s ease-in-out;
-}
-
-@function set-text-color($color) {
-    @if (color.lightness($color) > 40%) {
-        @return #000;
-    } @else {
-        @return #fff;
-    }
-}
-
 // Variables
 $primary-color: #272727;
 $secondary-color: #ff652f;
@@ -56,6 +43,14 @@ $text-light: #ffffff;
 $text-dark: #1f2937;
 
 // Functions
+@function set-text-color($color) {
+    @if (color.lightness($color) > 40%) {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+}
+
 @function gradient-overlay($opacity) {
     @return linear-gradient(
         to bottom,
@@ -64,7 +59,11 @@ $text-dark: #1f2937;
     );
 }
 
-// Additional mixins
+// Mixins
+@mixin transition-ease {
+    transition: all 0.3s ease-in-out;
+}
+
 @mixin visually-hidden {
     position: absolute;
     width: 1px;

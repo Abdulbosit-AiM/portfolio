@@ -1,9 +1,9 @@
 @use './config' as *;
-@use './base' as *;
-@use './components' as *;
-@use './home' as *;
-@use './menu' as *;
-@use './about' as *;
-@use './projects' as *;
-@use './contact' as *;
-@use './responsive' as *;
+@use './base';
+@use './components';
+@use './home';
+@use './menu';
+@use './about';
+@use './projects';
+@use './contact';
+@use './responsive';
