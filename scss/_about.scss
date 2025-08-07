@@ -54,12 +54,111 @@
         }
     }
 
+    &__education,
+    &__skills,
+    &__leadership,
+    &__aspirations {
+        width: min(90vw, 800px);
+        margin: $spacing-8 auto;
+        text-align: center;
+        
+        h2 {
+            margin-bottom: $spacing-6;
+        }
+    }
+
+    .education,
+    .leadership {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: $spacing-4;
+        
+        &__item {
+            @include card;
+            text-align: left;
+            border-left: 4px solid $secondary-color;
+            
+            h3 {
+                color: $secondary-color;
+                font-size: $font-size-lg;
+                margin-bottom: $spacing-1;
+            }
+            
+            h4 {
+                color: set-text-color($primary-color);
+                font-size: $font-size-base;
+                font-weight: 500;
+                margin-bottom: $spacing-1;
+            }
+            
+            h6 {
+                color: $text-muted;
+                font-size: $font-size-sm;
+                margin-bottom: $spacing-3;
+                text-transform: uppercase;
+                letter-spacing: 0.05em;
+            }
+            
+            p {
+                margin-bottom: $spacing-2;
+                
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    .skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: $spacing-4;
+        
+        &__category {
+            @include card;
+            text-align: left;
+            
+            h3 {
+                color: $secondary-color;
+                font-size: $font-size-base;
+                margin-bottom: $spacing-2;
+                font-weight: 600;
+            }
+            
+            p {
+                color: lighten(set-text-color($primary-color), 5%);
+                font-size: $font-size-sm;
+                line-height: 1.6;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .aspirations {
+        @include card;
+        text-align: left;
+        max-width: 600px;
+        margin: $spacing-8 auto;
+        
+        p {
+            font-size: $font-size-base;
+            line-height: 1.7;
+            margin-bottom: 0;
+        }
+    }
+
     .jobs {
         width: min(90vw, 800px);
         margin: $spacing-8 auto 0 auto;
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: $spacing-6;
+        
+        h2 {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: $spacing-4;
+        }
 
         &__job {
             @include card;

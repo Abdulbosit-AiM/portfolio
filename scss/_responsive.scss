@@ -35,6 +35,17 @@
         grid-template-columns: repeat(2, 1fr);
         width: min(85vw, 900px);
     }
+    
+    .about .education,
+    .about .leadership {
+        &__item {
+            // Keep single column on tablet
+        }
+    }
+    
+    .about .skills {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .projects {
         &__bio-image {
@@ -85,6 +96,15 @@
     .about .jobs {
         grid-template-columns: repeat(3, 1fr);
         width: min(90vw, 1100px);
+    }
+    
+    .about .education,
+    .about .leadership {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .about .skills {
+        grid-template-columns: repeat(4, 1fr);
     }
 }
 
