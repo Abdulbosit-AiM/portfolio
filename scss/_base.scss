@@ -173,7 +173,7 @@ a {
     color: white;
     
     &:hover {
-      background: color.adjust(#f97316, $lightness: -10%);
+      background: var(--color-accent-orange-dark);
       transform: translateY(-1px);
       box-shadow: var(--shadow-lg);
     }
@@ -191,14 +191,14 @@ a {
   }
   
   &--ghost {
-    background: rgba(255, 255, 255, 0.1);
+    background: $transparent-white-10;
     color: var(--color-neutral-50);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid $transparent-white-20;
     
     &:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: rgba(255, 255, 255, 0.3);
+      background: $transparent-white-20;
+      border-color: $transparent-white-30;
     }
   }
 }

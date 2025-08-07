@@ -7,8 +7,8 @@
   padding: var(--space-16) var(--space-4);
   background: 
     linear-gradient(135deg, 
-      rgba(12, 74, 110, 0.95), 
-      rgba(7, 89, 133, 0.9)
+      $transparent-primary-950-95, 
+      $transparent-primary-900-90
     ),
     url(../img/model-1.jpg) center/cover;
   background-attachment: fixed;
@@ -21,7 +21,7 @@
     background: radial-gradient(
       circle at center,
       transparent 0%,
-      rgba(12, 74, 110, 0.4) 100%
+      $transparent-primary-950-40 100%
     );
     pointer-events: none;
   }
@@ -72,9 +72,9 @@
   }
 
   &__card {
-    background: rgba(255, 255, 255, 0.1);
+    background: $transparent-white-10;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid $transparent-white-20;
     border-radius: var(--radius-2xl);
     padding: var(--space-8);
     text-align: center;
@@ -89,7 +89,7 @@
     
     &:hover {
       transform: translateY(-4px);
-      border-color: rgba(255, 255, 255, 0.3);
+      border-color: $transparent-white-30;
       box-shadow: var(--shadow-xl);
     }
     
@@ -159,8 +159,8 @@
     textarea {
       width: 100%;
       padding: var(--space-4);
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
+      background: $transparent-white-10;
+      border: 1px solid $transparent-white-20;
       border-radius: var(--radius-lg);
       color: var(--color-neutral-50);
       font-family: inherit;
@@ -175,7 +175,7 @@
       &:focus {
         outline: none;
         border-color: var(--color-accent-orange);
-        box-shadow: 0 0 0 3px rgba(249, 115, 22, 0.1);
+        box-shadow: 0 0 0 3px color.rgba($raw-accent-orange, 0.1);
       }
     }
     

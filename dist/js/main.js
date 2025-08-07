@@ -15,7 +15,6 @@ class PortfolioApp {
     init() {
         this.setupEventListeners();
         this.setupIntersectionObserver();
-        this.setupLazyLoading();
         this.preloadCriticalResources();
         this.setupAccessibility();
     }
@@ -141,30 +140,6 @@ class PortfolioApp {
         document.querySelectorAll('.education__item, .experience__item, .leadership__item').forEach(el => {
             observer.observe(el);
         });
-    }
-    
-    setupLazyLoading() {
-        // Modern lazy loading with Intersection Observer
-        if ('IntersectionObserver' in window) {
-            const imageObserver = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        if (img.dataset.src) {
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            imageObserver.unobserve(img);
-                        }
-                    }
-                });
-            }, {
-                rootMargin: '50px 0px'
-            });
-
-            document.querySelectorAll('img[data-src]').forEach(img => {
-                imageObserver.observe(img);
-            });
-        }
     }
     
     preloadCriticalResources() {

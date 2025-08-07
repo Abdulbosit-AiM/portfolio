@@ -9,8 +9,8 @@
   padding: var(--space-8) var(--space-4);
   background: 
     linear-gradient(135deg, 
-      rgba(12, 74, 110, 0.95), 
-      rgba(7, 89, 133, 0.9)
+      $transparent-primary-950-95, 
+      $transparent-primary-900-90
     ),
     url(../img/model-1.jpg) center/cover;
   background-attachment: fixed;
@@ -22,7 +22,7 @@
     background: radial-gradient(
       circle at 50% 50%,
       transparent 0%,
-      rgba(12, 74, 110, 0.3) 100%
+      $transparent-primary-950-30 100%
     );
     pointer-events: none;
   }

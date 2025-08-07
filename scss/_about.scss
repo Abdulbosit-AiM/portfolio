@@ -57,9 +57,9 @@
   }
 
   &__bio {
-    background: rgba(255, 255, 255, 0.05);
+    background: $transparent-white-5;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid $transparent-white-10;
     border-radius: var(--radius-2xl);
     padding: var(--space-8);
     margin-bottom: var(--space-12);
@@ -94,9 +94,9 @@
     }
 
     &__item {
-      background: rgba(255, 255, 255, 0.05);
+      background: $transparent-white-5;
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid $transparent-white-10;
       border-radius: var(--radius-xl);
       padding: var(--space-6);
       transition: all var(--transition-normal);
@@ -116,7 +116,7 @@
       
       &:hover {
         transform: translateY(-4px);
-        border-color: rgba(255, 255, 255, 0.2);
+        border-color: $transparent-white-20;
         box-shadow: var(--shadow-xl);
       }
       
@@ -166,9 +166,9 @@
     }
 
     &__category {
-      background: rgba(255, 255, 255, 0.05);
+      background: $transparent-white-5;
       backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.1);
+      border: 1px solid $transparent-white-10;
       border-radius: var(--radius-xl);
       padding: var(--space-6);
       text-align: center;
@@ -176,7 +176,7 @@
       
       &:hover {
         transform: translateY(-2px);
-        border-color: rgba(255, 255, 255, 0.2);
+        border-color: $transparent-white-20;
       }
       
       h3 {
@@ -196,9 +196,9 @@
   }
 
   .aspirations {
-    background: rgba(255, 255, 255, 0.05);
+    background: $transparent-white-5;
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid $transparent-white-10;
     border-radius: var(--radius-2xl);
     padding: var(--space-8);
     text-align: center;
