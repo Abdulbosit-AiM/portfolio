@@ -229,7 +229,7 @@ export default function ContentEditor({ data, setData }: ContentEditorProps) {
                   <h3 className="text-lg font-medium text-white">Project {index + 1}</h3>
                   <button
                     onClick={() => removeProject(index)}
-                    className="p-2 text-red-400 hover:text-red-300 hover:bg-red-500/10 rounded-lg transition-colors"
+                    className="p-2 text-error-400 hover:text-error-300 hover:bg-error-500/10 rounded-lg transition-colors"
                   >
                     <Trash2 className="w-4 h-4" />
                   </button>

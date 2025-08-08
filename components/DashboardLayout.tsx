@@ -88,7 +88,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
           
           <button
             onClick={handleLogout}
-            className="flex items-center gap-2 px-4 py-2 text-neutral-400 hover:text-red-400 hover:bg-red-500/10 rounded-lg transition-colors text-sm w-full"
+            className="flex items-center gap-2 px-4 py-2 text-neutral-400 hover:text-error-400 hover:bg-error-500/10 rounded-lg transition-colors text-sm w-full"
           >
             <LogOut className="w-4 h-4" />
             Logout
