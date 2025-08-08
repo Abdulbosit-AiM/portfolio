@@ -191,14 +191,14 @@ a {
   }
   
   &--ghost {
-    background: $transparent-white-10;
+    background: rgba(255, 255, 255, 0.1);
     color: var(--color-neutral-50);
     backdrop-filter: blur(10px);
-    border: 1px solid $transparent-white-20;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     
     &:hover {
-      background: $transparent-white-20;
-      border-color: $transparent-white-30;
+      background: rgba(255, 255, 255, 0.2);
+      border-color: rgba(255, 255, 255, 0.3);
     }
   }
 }

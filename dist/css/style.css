@@ -1,10 +1,11 @@
-/* Error: Undefined variable.
+/* Error: Undefined mixin.
  *     ,
- * 194 |     background: $transparent-white-10;
- *     |                 ^^^^^^^^^^^^^^^^^^^^^
+ * 239 | /     @include media-md {
+ * 240 | |       grid-template-columns: repeat(2, 1fr);
+ * 241 | \     }
  *     '
- *   scss/_base.scss 194:17  @use
- *   scss/style.scss 2:1     root stylesheet */
+ *   scss/_base.scss 239:5  @use
+ *   scss/style.scss 2:1    root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -14,5 +15,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a     \2577 \a 194 \2502      background: $transparent-white-10;\a     \2502                  ^^^^^^^^^^^^^^^^^^^^^\a     \2575 \a   scss/_base.scss 194:17  @use\a   scss/style.scss 2:1     root stylesheet";
+  content: "Error: Undefined mixin.\a     \2577 \a 239 \2502  \250c      @include media-md {\a 240 \2502  \2502        grid-template-columns: repeat(2, 1fr);\a 241 \2502  \2514      }\a     \2575 \a   scss/_base.scss 239:5  @use\a   scss/style.scss 2:1    root stylesheet";
 }
