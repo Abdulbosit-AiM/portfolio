@@ -102,7 +102,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Ten JavaScript Projects',
       description: 'A comprehensive collection of interactive web applications showcasing various JavaScript concepts and modern development practices.',
-      image: 'https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Ten JavaScript Projects - Collection of interactive web applications',
       technologies: ['JavaScript', 'HTML5', 'CSS3'],
       liveUrl: 'https://abdulbosit-aim.github.io/ten-js-projects/',
@@ -120,7 +120,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Bootstrap SASS Project',
       description: 'Modern responsive website built with Bootstrap 5 and SASS, featuring custom components and optimized performance.',
-      image: 'https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Bootstrap SASS Project - Modern responsive website',
       technologies: ['Bootstrap 5', 'SASS', 'Responsive'],
       liveUrl: 'https://abdulbosit-aim.github.io/bootstrap5-sass/',
@@ -129,7 +129,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Task Management App',
       description: 'Feature-rich to-do list application with local storage, drag-and-drop functionality, and priority management.',
-      image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/3299/laptop-computer-technology-music.jpg?auto=compress&cs=tinysrgb&w=800',
       alt: 'To-Do List App - Task management application',
       technologies: ['JavaScript', 'Local Storage', 'Drag & Drop'],
       liveUrl: 'https://abdulbosit-aim.github.io/to-do-list-js/',
@@ -138,7 +138,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Modern Calculator',
       description: 'Advanced calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.',
-      image: 'https://images.pexels.com/photos/5940721/pexels-photo-5940721.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/6913/numbers-money-calculating-calculation.jpg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Modern Calculator - JavaScript calculator with advanced functions',
       technologies: ['JavaScript', 'Math.js', 'Keyboard Events'],
       liveUrl: 'https://abdulbosit-aim.github.io/modern-js-calculator/',
@@ -147,7 +147,7 @@ export const portfolioData: PortfolioData = {
     {
       title: 'Analog Clock',
       description: 'Beautiful real-time analog clock with smooth animations, customizable themes, and timezone support.',
-      image: 'https://images.pexels.com/photos/1778412/pexels-photo-1778412.jpeg?auto=compress&cs=tinysrgb&w=800',
+      image: 'https://images.pexels.com/photos/1095601/pexels-photo-1095601.jpeg?auto=compress&cs=tinysrgb&w=800',
       alt: 'Analog Clock - Real-time analog clock built with JavaScript',
       technologies: ['JavaScript', 'Canvas API', 'Animations'],
       liveUrl: 'https://abdulbosit-aim.github.io/simple-analog-clock-js/',
