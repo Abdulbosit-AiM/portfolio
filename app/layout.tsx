@@ -14,10 +14,25 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://abdulbosit-portfolio.vercel.app'),
   title: 'Abdulbosit Melikuziev - Product Manager & AI Specialist',
   description: 'Product Manager and AI Specialist with expertise in data analysis, digital transformation, and user-centric technology solutions.',
   keywords: 'product manager, AI specialist, data analysis, digital transformation, fintech, edtech',
   authors: [{ name: 'Abdulbosit Melikuziev' }],
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' }
+    ],
+    other: [
+      { url: '/icon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/icon-512.png', sizes: '512x512', type: 'image/png' }
+    ]
+  },
+  manifest: '/manifest.json',
   openGraph: {
     title: 'Abdulbosit Melikuziev - Product Manager & AI Specialist',
     description: 'Product Manager and AI Specialist with expertise in data analysis, digital transformation, and user-centric technology solutions.',

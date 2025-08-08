@@ -13,13 +13,11 @@ export async function PUT(request: NextRequest) {
   }
 
   try {
-    const updatedData = await request.json()
-    
     // In a real application, you would save this to a database
     // For now, we'll just return success
     
     return NextResponse.json({ message: 'Portfolio updated successfully' })
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { message: 'Failed to update portfolio' },
       { status: 500 }

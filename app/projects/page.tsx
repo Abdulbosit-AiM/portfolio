@@ -9,7 +9,9 @@ export default function Projects() {
       <Navigation />
       <ProjectsHero />
       <ProjectsGrid />
-      <SocialIcons />
+      <div className="flex justify-center pb-12 md:pb-20">
+        <SocialIcons />
+      </div>
     </main>
   )
 }

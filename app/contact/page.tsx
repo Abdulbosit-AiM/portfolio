@@ -9,7 +9,9 @@ export default function Contact() {
       <Navigation />
       <ContactHero />
       <ContactGrid />
-      <SocialIcons />
+      <div className="flex justify-center pb-24 md:pb-32">
+        <SocialIcons />
+      </div>
     </main>
   )
 }

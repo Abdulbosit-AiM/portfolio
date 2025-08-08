@@ -7,7 +7,9 @@ export default function Home() {
     <main className="min-h-screen relative">
       <Navigation />
       <Hero />
-      <SocialIcons />
+      <div className="flex justify-center pb-20 md:pb-32">
+        <SocialIcons />
+      </div>
     </main>
   )
 }

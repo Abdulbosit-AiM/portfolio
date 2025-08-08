@@ -9,7 +9,9 @@ export default function About() {
       <Navigation />
       <AboutHero />
       <AboutContent />
-      <SocialIcons />
+      <div className="flex justify-center pb-16 md:pb-24">
+        <SocialIcons />
+      </div>
     </main>
   )
 }

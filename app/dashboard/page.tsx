@@ -22,7 +22,7 @@ export default function Dashboard() {
         } else {
           router.push('/authadmin')
         }
-      } catch (error) {
+      } catch {
         router.push('/authadmin')
       } finally {
         setIsLoading(false)

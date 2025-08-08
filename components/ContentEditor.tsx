@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Save, Plus, Trash2, Edit3 } from 'lucide-react'
+import { Save, Plus, Trash2 } from 'lucide-react'
 import toast from 'react-hot-toast'
 import type { PortfolioData } from '@/types/portfolio'
 
@@ -30,7 +30,7 @@ export default function ContentEditor({ data, setData }: ContentEditorProps) {
       } else {
         toast.error('Failed to update portfolio')
       }
-    } catch (error) {
+    } catch {
       toast.error('Failed to update portfolio')
     } finally {
       setIsLoading(false)
@@ -76,7 +76,7 @@ export default function ContentEditor({ data, setData }: ContentEditorProps) {
     })
   }
 
-  const updateProject = (index: number, field: string, value: any) => {
+  const updateProject = (index: number, field: string, value: string | string[]) => {
     const newProjects = [...data.projects]
     newProjects[index] = {
       ...newProjects[index],
@@ -121,7 +121,7 @@ export default function ContentEditor({ data, setData }: ContentEditorProps) {
         ].map((section) => (
           <button
             key={section.key}
-            onClick={() => setActiveSection(section.key as any)}
+            onClick={() => setActiveSection(section.key as keyof PortfolioData)}
             className={`px-4 py-2 rounded-lg font-medium transition-colors whitespace-nowrap ${
               activeSection === section.key
                 ? 'bg-accent-orange text-white'

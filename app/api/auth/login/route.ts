@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import bcrypt from 'bcryptjs'
 
-const ADMIN_EMAIL = 'abdulbosit.melikuziev@gmail.com'
-const ADMIN_PASSWORD_HASH = '$2a$12$LQv3c1yqBwEHFl5aysHdsOHiUiVlHznpvOmjjvQBXNvRE6jBdHvyS' // abtv_uk@portfolio.site
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL || 'abdulbosit.melikuziev@gmail.com'
+const ADMIN_PASSWORD_HASH = process.env.ADMIN_PASSWORD_HASH || '$2a$12$LQv3c1yqBwEHFl5aysHdsOHiUiVlHznpvOmjjvQBXNvRE6jBdHvyS'
 
 export async function POST(request: NextRequest) {
   try {
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
     })
 
     return response
-  } catch (error) {
+  } catch {
     return NextResponse.json(
       { message: 'Internal server error' },
       { status: 500 }

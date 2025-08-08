@@ -18,7 +18,7 @@ export default function ContactHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Let's Connect
+          Let&apos;s Connect
         </motion.h1>
         <motion.p
           className="text-xl text-neutral-300 max-w-2xl mx-auto"

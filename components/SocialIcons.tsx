@@ -26,12 +26,16 @@ const socialLinks = [
   },
 ]
 
-export default function SocialIcons() {
+interface SocialIconsProps {
+  className?: string
+}
+
+export default function SocialIcons({ className }: SocialIconsProps) {
   return (
     <motion.div
-      className="fixed bottom-6 left-6 z-30 flex flex-col gap-4 md:flex-row md:justify-center md:relative md:bottom-auto md:left-auto md:mt-12"
-      initial={{ opacity: 0, x: -30 }}
-      animate={{ opacity: 1, x: 0 }}
+      className={`relative z-30 flex flex-col gap-4 md:flex-row md:justify-center ${className ?? ''}`}
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 1 }}
     >
       {socialLinks.map((link, index) => {

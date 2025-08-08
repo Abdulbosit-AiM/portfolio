@@ -32,7 +32,7 @@ export default function AdminLogin() {
         const error = await response.json()
         toast.error(error.message || 'Invalid credentials')
       }
-    } catch (error) {
+    } catch {
       toast.error('Login failed. Please try again.')
     } finally {
       setIsLoading(false)

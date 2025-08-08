@@ -10,7 +10,6 @@ import {
   LogOut, 
   Menu, 
   X,
-  Save,
   Eye
 } from 'lucide-react'
 import Link from 'next/link'
@@ -36,7 +35,7 @@ export default function DashboardLayout({ children }: DashboardLayoutProps) {
       await fetch('/api/auth/logout', { method: 'POST' })
       toast.success('Logged out successfully')
       router.push('/authadmin')
-    } catch (error) {
+    } catch {
       toast.error('Logout failed')
     }
   }

@@ -20,7 +20,7 @@ export default function ProjectsHero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          A collection of web applications and innovative solutions I've built
+          A collection of web applications and innovative solutions I&apos;ve built
         </motion.p>
       </div>
     </section>

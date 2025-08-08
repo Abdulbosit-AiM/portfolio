@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
+import Image from 'next/image'
 import { portfolioData } from '@/lib/portfolio-data'
 
 export default function ProjectsGrid() {
@@ -19,10 +20,12 @@ export default function ProjectsGrid() {
             transition={{ duration: 0.6, delay: index * 0.1 }}
           >
             <div className="relative aspect-video overflow-hidden">
-              <img
+              <Image
                 src={project.image}
                 alt={project.alt}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary-950/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
