@@ -1,0 +1,162 @@
+import type { PortfolioData } from '@/types/portfolio'
+
+export const portfolioData: PortfolioData = {
+  personal: {
+    name: 'Abdulbosit Melikuziev',
+    title: 'Product Manager & AI Specialist',
+    subtitle: 'Product Manager & AI Specialist with expertise in data analysis, digital transformation, and user-centric technology solutions',
+  },
+  about: {
+    bio: [
+      "I'm a detail-oriented and versatile early-career professional with a strong foundation in product management, AI language models, data analysis, and digital education. With hands-on experience in cross-functional collaboration, UX research, and behavioural analytics, I bring a user-first mindset and a strategic approach to building and improving digital tools.",
+      "A recent graduate of the University of Manchester with an MSc in Innovation Management and Entrepreneurship, I have applied my academic and technical background to roles in fintech, AI, higher education, and edtech. I'm driven by a passion for digital transformation, data-led decision-making, and inclusive, human-centred technology."
+    ],
+    education: [
+      {
+        badge: 'Distinction',
+        degree: 'MSc Innovation Management and Entrepreneurship',
+        institution: 'University of Manchester, UK',
+        period: 'Dec 2024 • Distinction (70%)',
+        dissertation: 'Dissertation: "Validating the desirability and feasibility of AI avatars in business schools"',
+        details: 'Key modules: Innovation Analysis (R), High-Tech Entrepreneurship, Research Methods'
+      },
+      {
+        badge: 'High GPA',
+        degree: 'BSc Economics and Management in ICT',
+        institution: 'Tashkent University of Information Technologies, Uzbekistan',
+        period: 'Jun 2022 • GPA: 4.46/5.0',
+        dissertation: 'Dissertation: "E-commerce in Business Organisation: Case Study of Amazon"',
+        details: 'Technical modules: Python, Web Programming, Databases, Project Management'
+      }
+    ],
+    experience: [
+      {
+        badge: 'Current',
+        title: 'Product Manager Intern',
+        company: 'Cur8 Capital, London, UK',
+        period: 'Jun - Jul 2025',
+        description: 'Conducted user research on KYC/EDD workflows and designed fintech features. Built dashboards in Metabase to extract behavioural insights. Drafted product briefs and collaborated in agile sprints and roadmap discussions.'
+      },
+      {
+        badge: 'Freelance',
+        title: 'AI / LLM Reviewer',
+        company: 'Outlier, Scale AI',
+        period: 'Oct 2024 - Present',
+        description: 'Evaluated AI-generated responses, ensuring accuracy and clarity. Trained LLMs using domain expertise in economics and finance.'
+      },
+      {
+        title: 'Data Assistant',
+        company: 'Times Higher Education, London, UK',
+        period: 'Nov 2024 - Jun 2025',
+        description: 'Validated and cleaned multilingual (Uzbek/Russian/English) data. Used Excel and Freshdesk to manage data workflows for global university rankings.'
+      },
+      {
+        title: 'Learning & Development Coordinator',
+        company: 'Cambridge Learning Centre, Tashkent',
+        period: 'Mar 2022 - Sep 2023',
+        description: 'Led redesign of training programmes for teachers. Taught 200+ students using communicative approaches.'
+      },
+      {
+        title: 'Programming Instructor',
+        company: 'CODDY Coding School, Tashkent',
+        period: 'Jan 2021 - Dec 2021',
+        description: 'Taught HTML, CSS, JavaScript, and computer science basics to children and adults. Designed age-specific curricula with a 90% student satisfaction rate.'
+      }
+    ],
+    skills: [
+      {
+        category: 'Product Management',
+        items: 'User Research, Agile/Scrum, Product Lifecycle, Behavioural Analytics, UX Research'
+      },
+      {
+        category: 'Technical Skills',
+        items: 'Python, JavaScript, R, HTML, CSS, SQL, Git'
+      },
+      {
+        category: 'Tools & Platforms',
+        items: 'Metabase, Figma, Jira, Confluence, Power BI, Miro, Notion, ClickUp'
+      },
+      {
+        category: 'Languages',
+        items: 'English (Fluent), Uzbek (Native), Russian (Native), German (Basic), Turkish (Basic)'
+      }
+    ],
+    leadership: [
+      {
+        badge: 'Current',
+        title: 'Innovation Officer',
+        organization: 'Uzbekistan Students Union in the UK',
+        period: 'Dec 2024 - Present',
+        description: 'Promotes innovation-driven collaboration among Uzbek students across the UK'
+      },
+      {
+        title: 'Student Representative',
+        organization: 'Alliance Manchester Business School',
+        period: 'Oct 2023 - Sep 2024',
+        description: 'Liaised between students and faculty to improve academic experience. Co-organised social events for a 90+ student cohort'
+      }
+    ],
+    careerVision: "I aim to remain within product ownership and grow into a strategic product role, working on data-driven, user-centric platforms that drive impact and accessibility. I'm passionate about contributing to digital transformation initiatives across sectors like fintech, education, and legal tech."
+  },
+  projects: [
+    {
+      title: 'Ten JavaScript Projects',
+      description: 'A comprehensive collection of interactive web applications showcasing various JavaScript concepts and modern development practices.',
+      image: 'https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Ten JavaScript Projects - Collection of interactive web applications',
+      technologies: ['JavaScript', 'HTML5', 'CSS3'],
+      liveUrl: 'https://abdulbosit-aim.github.io/ten-js-projects/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/ten-js-projects'
+    },
+    {
+      title: 'Weather Application',
+      description: 'Real-time weather application with location-based forecasts, interactive maps, and responsive design.',
+      image: 'https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Weather App - JavaScript weather application with real-time data',
+      technologies: ['JavaScript', 'API Integration', 'Geolocation'],
+      liveUrl: 'https://abdulbosit-aim.github.io/weather-app-js/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/weather-app-js'
+    },
+    {
+      title: 'Bootstrap SASS Project',
+      description: 'Modern responsive website built with Bootstrap 5 and SASS, featuring custom components and optimized performance.',
+      image: 'https://images.pexels.com/photos/270404/pexels-photo-270404.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Bootstrap SASS Project - Modern responsive website',
+      technologies: ['Bootstrap 5', 'SASS', 'Responsive'],
+      liveUrl: 'https://abdulbosit-aim.github.io/bootstrap5-sass/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/bootstrap5-sass'
+    },
+    {
+      title: 'Task Management App',
+      description: 'Feature-rich to-do list application with local storage, drag-and-drop functionality, and priority management.',
+      image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojNjM2NmYxO3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzgzMzNlYTtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncmFkKSIvPjx0ZXh0IHg9IjEwMCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjkiPuKchTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ij7inIU8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSIxMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNyI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iMTAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjYiPuKchTwvdGV4dD48dGV4dCB4PSI1MDAiIHk9IjEwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij7inIU8L3RleHQ+PHRleHQgeD0iNjAwIiB5PSIxMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNCI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjEwMCIgeT0iMjAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjgiPuKchTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC43Ij7inIU8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iMjAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjUiPuKchTwvdGV4dD48dGV4dCB4PSI1MDAiIHk9IjIwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC40Ij7inIU8L3RleHQ+PHRleHQgeD0iNjAwIiB5PSIyMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMyI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjEwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciPuKchTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjMwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC42Ij7inIU8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSIzMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNSI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iMzAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiPuKchTwvdGV4dD48dGV4dCB4PSI1MDAiIHk9IjMwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4zIj7inIU8L3RleHQ+PHRleHQgeD0iNjAwIiB5PSIzMDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMiI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjEwMCIgeT0iNDAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjYiPuKchTwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjQwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij7inIU8L3RleHQ+PHRleHQgeD0iMzAwIiB5PSI0MDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNCI+4pyFPC90ZXh0Pjx0ZXh0IHg9IjQwMCIgeT0iNDAwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNzIiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjMiPuKchTwvdGV4dD48dGV4dCB4PSI1MDAiIHk9IjQwMCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjcyIiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIj7inIU8L3RleHQ+PHRleHQgeD0iNjAwIiB5PSI0MDAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI3MiIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMSI+4pyFPC90ZXh0Pjwvc3ZnPg==',
+      alt: 'To-Do List App - Task management application',
+      technologies: ['JavaScript', 'Local Storage', 'Drag & Drop'],
+      liveUrl: 'https://abdulbosit-aim.github.io/to-do-list-js/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/to-do-list-js'
+    },
+    {
+      title: 'Modern Calculator',
+      description: 'Advanced calculator with scientific functions, history tracking, and keyboard support for enhanced user experience.',
+      image: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgdmlld0JveD0iMCAwIDgwMCA0NTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiB4MT0iMCUiIHkxPSIwJSIgeDI9IjEwMCUiIHkyPSIxMDAlIj48c3RvcCBvZmZzZXQ9IjAlIiBzdHlsZT0ic3RvcC1jb2xvcjojMGY3MmZmO3N0b3Atb3BhY2l0eToxIiAvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3R5bGU9InN0b3AtY29sb3I6IzEwYjk4MTtzdG9wLW9wYWNpdHk6MSIgLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iODAwIiBoZWlnaHQ9IjQ1MCIgZmlsbD0idXJsKCNncmFkKSIvPjx0ZXh0IHg9IjgwIiB5PSI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC45Ij7wn5KXPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuOCI+8J+SljwvdGV4dD48dGV4dCB4PSIzMjAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciPvCfkpU8L3RleHQ+PHRleHQgeD0iNDQwIiB5PSI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC42Ij7wn5KUPC90ZXh0Pjx0ZXh0IHg9IjU2MCIgeT0iODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNSI+8J+SljwvdGV4dD48dGV4dCB4PSI2ODAiIHk9IjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiPvCfkpU8L3RleHQ+PHRleHQgeD0iODAiIHk9IjE4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC44Ij7wn5KUPC90ZXh0Pjx0ZXh0IHg9IjIwMCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciPvCfkpU8L3RleHQ+PHRleHQgeD0iMzIwIiB5PSIxODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiI+8J+SljwvdGV4dD48dGV4dCB4PSI0NDAiIHk9IjE4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij7wn5KXPC90ZXh0Pjx0ZXh0IHg9IjU2MCIgeT0iMTgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiPvCfkpQ8L3RleHQ+PHRleHQgeD0iNjgwIiB5PSIxODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMyI+8J+SljwvdGV4dD48dGV4dCB4PSI4MCIgeT0iMjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjciPvCfkpU8L3RleHQ+PHRleHQgeD0iMjAwIiB5PSIyODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiI+8J+SljwvdGV4dD48dGV4dCB4PSIzMjAiIHk9IjI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij7wn5KXPC90ZXh0Pjx0ZXh0IHg9IjQ0MCIgeT0iMjgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiPvCfkpQ8L3RleHQ+PHRleHQgeD0iNTYwIiB5PSIyODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMyI+8J+SljwvdGV4dD48dGV4dCB4PSI2ODAiIHk9IjI4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIj7wn5KVPC90ZXh0Pjx0ZXh0IHg9IjgwIiB5PSIzODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuNiI+8J+SljwvdGV4dD48dGV4dCB4PSIyMDAiIHk9IjM4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC41Ij7wn5KXPC90ZXh0Pjx0ZXh0IHg9IjMyMCIgeT0iMzgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjQiPvCfkpQ8L3RleHQ+PHRleHQgeD0iNDQwIiB5PSIzODAiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSI2NCIgZmlsbD0id2hpdGUiIG9wYWNpdHk9IjAuMyI+8J+SljwvdGV4dD48dGV4dCB4PSI1NjAiIHk9IjM4MCIgZm9udC1mYW1pbHk9IkFyaWFsIiBmb250LXNpemU9IjY0IiBmaWxsPSJ3aGl0ZSIgb3BhY2l0eT0iMC4yIj7wn5KVPC90ZXh0Pjx0ZXh0IHg9IjY4MCIgeT0iMzgwIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtc2l6ZT0iNjQiIGZpbGw9IndoaXRlIiBvcGFjaXR5PSIwLjEiPvCfkpQ8L3RleHQ+PC9zdmc+',
+      alt: 'Modern Calculator - JavaScript calculator with advanced functions',
+      technologies: ['JavaScript', 'Math.js', 'Keyboard Events'],
+      liveUrl: 'https://abdulbosit-aim.github.io/modern-js-calculator/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/modern-js-calculator'
+    },
+    {
+      title: 'Analog Clock',
+      description: 'Beautiful real-time analog clock with smooth animations, customizable themes, and timezone support.',
+      image: 'https://images.pexels.com/photos/1095601/pexels-photo-1095601.jpeg?auto=compress&cs=tinysrgb&w=800',
+      alt: 'Analog Clock - Real-time analog clock built with JavaScript',
+      technologies: ['JavaScript', 'Canvas API', 'Animations'],
+      liveUrl: 'https://abdulbosit-aim.github.io/simple-analog-clock-js/',
+      githubUrl: 'https://github.com/Abdulbosit-AiM/simple-analog-clock-js'
+    }
+  ],
+  contact: {
+    email: 'abdulbosit.melikuziev@gmail.com',
+    phone: '0788-460-7553',
+    location: 'London, UK'
+  }
+}
