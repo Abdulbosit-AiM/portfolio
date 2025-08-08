@@ -46,12 +46,12 @@ export default function ContactGrid() {
               {method.href ? (
                 <a
                   href={method.href}
-                  className="text-accent-orange hover:text-accent-pink transition-colors font-medium"
+                  className="text-accent-orange hover:text-accent-pink transition-colors font-medium break-all text-sm"
                 >
                   {method.value}
                 </a>
               ) : (
-                <span className="text-neutral-300">{method.value}</span>
+                <span className="text-neutral-300 break-all text-sm">{method.value}</span>
               )}
             </motion.div>
           )
